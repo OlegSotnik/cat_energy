@@ -1,0 +1,98 @@
+.page-main {
+  display: flex;
+  flex-direction: column;
+  max-width: 1150px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.main__h2 {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+  color: @basic_black;
+
+  @media (min-width: @tablet_width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: @desktop_width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
+.main__button {
+  border: 2px solid @dark_grey;
+  box-sizing: border-box;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: @dark_grey;
+  background-color: @basic_white;
+  padding: 11px 36px;
+}
+
+.main__wave {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 25px;
+
+  @media (min-width: @tablet_width) {
+    height: 32px;
+  }
+
+  @media (min-width: @desktop_width) {
+    width: calc(~'100% - 100px');
+    margin: 0 auto;
+    height: 46px;
+  }
+}
+
+.wave__semicircle {
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  background: radial-gradient(8px, transparent, transparent 4px, @medium_grey 4px, @medium_grey 7px, transparent 8px);
+  background-size: 22px 21px;
+  background-position: -11px 0px;
+
+  @media (min-width: @tablet_width) {
+    height: 16px;
+    background: radial-gradient(16px, transparent, transparent 9px, @medium_grey 9px, @medium_grey 15px, transparent 16px);
+    background-size: 44px 42px;
+    background-position: -11px 0px;
+  }
+
+  @media (min-width: @desktop_width) {
+    height: 23px;
+    background: radial-gradient(23px, transparent, transparent 13px, @medium_grey 13px, @medium_grey 22px, transparent 23px);
+    background-size: 70px 52px;
+    background-position: -23px 0px;
+  }
+}
+
+.wave__semicircle-bottom {
+  top: 7px;
+  left: 0px;
+  background-position: 0px -13px;
+
+  @media (min-width: @tablet_width) {
+    top: 14px;
+    left: 11px;
+    background-position: 0px -26px;
+  }
+
+  @media (min-width: @desktop_width) {
+    top: 23px;
+    left: 11px;
+    background-position: 0px -32px;
+  }
+}
+
