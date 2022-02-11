@@ -60,14 +60,18 @@ const setPosition = () => {
 const checkArrows = () => {
   if (position === 0) {
     leftLine.classList.add('line--inactive');
+    arrowLeft.classList.add('slider-arrow__left--inactive');
   } else {
     leftLine.classList.remove('line--inactive');
+    arrowLeft.classList.remove('slider-arrow__left--inactive');
   }
 
   if (position <= -(itemsCount - 1) * itemWidth) {
     rightLine.classList.add('line--inactive');
+    arrowRight.classList.add('slider-arrow__right--inactive');
   } else {
     rightLine.classList.remove('line--inactive');
+    arrowRight.classList.remove('slider-arrow__right--inactive');
   }
 };
 

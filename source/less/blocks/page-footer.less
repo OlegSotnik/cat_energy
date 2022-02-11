@@ -36,6 +36,14 @@
   }
 }
 
+a:hover .footer__logo-image path {
+  fill: @sky_cyan;
+}
+
+a:active .footer__logo-image path {
+  opacity: 0.3;
+}
+
 .footer__list-socials {
   display: flex;
   justify-content: space-between;
@@ -46,6 +54,14 @@
   @media (min-width: @tablet_width) {
     min-height: 143px;
   }
+}
+
+.footer__item-socials:hover path {
+  fill: @sky_cyan;
+}
+
+.footer__item-socials:active path {
+  opacity: 0.3;
 }
 
 .footer__developer {
@@ -87,4 +103,12 @@
   line-height: 15px;
   color: @dark_cyan;
   margin-left: 8px;
+}
+
+.developer__name:hover {
+  opacity: 0.6;
+}
+
+.developer__name:active {
+  opacity: 0.3;
 }

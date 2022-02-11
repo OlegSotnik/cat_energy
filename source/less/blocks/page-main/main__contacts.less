@@ -133,10 +133,22 @@
   }
 }
 
+.contacts__link:hover {
+  color: @sky_cyan;
+}
+
+.contacts__link:active {
+  opacity: 0.3;
+}
+
 .contacts__link-mail {
   @media (min-width: @desktop_width) {
     border-bottom: 1px solid @dark_cyan;
   }
+}
+
+.contacts__link-mail:active {
+  border: none;
 }
 
 .contacts__map {

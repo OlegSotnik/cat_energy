@@ -13,6 +13,7 @@
   font-size: 25px;
   line-height: 30px;
   color: @basic_black;
+  text-decoration: none;
 
   @media (min-width: @tablet_width) {
     font-size: 43px;
@@ -23,6 +24,14 @@
     font-size: 53px;
     line-height: 57px;
   }
+}
+
+a.main__h2:hover {
+  opacity: 0.6;
+}
+
+a.main__h2:active {
+  opacity: 0.3;
 }
 
 .main__button {
@@ -36,6 +45,16 @@
   color: @dark_grey;
   background-color: @basic_white;
   padding: 11px 36px;
+  transition: all .2s ease;
+}
+
+.main__button:hover {
+  background-color: @dark_grey;
+  color: @basic_white;
+}
+
+.main__button:active {
+  color: @dark_silver;
 }
 
 .main__wave {
