@@ -16,34 +16,34 @@
   width: 100%;
   min-height: 88.4vw;
   background-image: url("../img/hero-mobile.jpg");
-  // @supports (background-image: url("../img/hero-mobile.webp")) {
-  //   background-image: url("../img/hero-mobile.webp");
-  // }
+  @supports (background-image: url("../img/hero-mobile.webp")) {
+    background-image: url("../img/hero-mobile.webp");
+  }
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: 0 -5.3vw;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/hero-mobile@2x.jpg");
-    // @supports (background-image: url("../img/globe_back_mobile@2x.webp")) {
-    //   background-image: url("../img/globe_back_mobile@2x.webp");
-    // }
+    @supports (background-image: url("../img/hero-mobile@2x.webp")) {
+      background-image: url("../img/hero-mobile@2x.webp");
+    }
   }
 
   @media (min-width: @tablet_width) {
     background-image: url("../img/hero-desktop.png");
-    // @supports (background-image: url("../img/hero-desktop.webp")) {
-    //   background-image: url("../img/hero-desktop.webp");
-    // }
+    @supports (background-image: url("../img/hero-desktop.webp")) {
+      background-image: url("../img/hero-desktop.webp");
+    }
     background-position: center -70px;
     background-size: 768px auto;
     min-height: 548px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/hero-desktop@2x.png");
-      // @supports (background-image: url("../img/hero-desktop@2x.webp")) {
-      //   background-image: url("../img/hero-desktop@2x.webp");
-      // }
+      @supports (background-image: url("../img/hero-desktop@2x.webp")) {
+        background-image: url("../img/hero-desktop@2x.webp");
+      }
     }
   }
 
