@@ -1,0 +1,114 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: @medium_grey;
+
+  @media (min-width: @desktop_width) {
+    width: 1150px;
+  }
+}
+
+.page-footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(~'100%-60px') ;
+  margin: 0 30px;
+
+  @media (min-width: @tablet_width) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: calc(~'100%-100px') ;
+    margin: 0 50px;
+  }
+}
+
+.footer__logo {
+  display: none;
+
+  @media (min-width: @tablet_width) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 30%;
+    min-height: 143px;
+  }
+}
+
+a:hover .footer__logo-image path {
+  fill: @sky_cyan;
+}
+
+a:active .footer__logo-image path {
+  opacity: 0.3;
+}
+
+.footer__list-socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 143px;
+  min-height: 80px;
+
+  @media (min-width: @tablet_width) {
+    min-height: 143px;
+  }
+}
+
+.footer__item-socials:hover path {
+  fill: @sky_cyan;
+}
+
+.footer__item-socials:active path {
+  opacity: 0.3;
+}
+
+.footer__developer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 80px;
+  border-top: 1px solid @silver;
+
+  @media (min-width: @tablet_width) {
+    flex-direction: column;
+    align-items: flex-end;
+    width: 30%;
+    min-height: 143px;
+    border-top: none;
+  }
+}
+
+.developer__text {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 18px;
+  color: @basic_black;
+  margin: 0;
+
+  @media (min-width: @tablet_width) {
+    margin-bottom: 7px;
+  }
+}
+
+.developer__name {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 15px;
+  color: @dark_cyan;
+  margin-left: 8px;
+}
+
+.developer__name:hover {
+  opacity: 0.6;
+}
+
+.developer__name:active {
+  opacity: 0.3;
+}

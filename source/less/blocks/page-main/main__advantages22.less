@@ -1,0 +1,116 @@
+.main__advantages {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  background-color: @basic_white;
+}
+
+.advantages__container {
+  display: flex;
+  flex-direction: column;
+  width: calc(~'100% - 60px');
+  background-color: @basic_white;
+  margin: 0 30px;
+
+  @media (min-width: @tablet_width) {
+    width: calc(~'100% - 100px');
+    margin: 0 50px;
+  }
+
+  @media (min-width: @desktop_width) {
+    width: 700px;
+    margin: 0 225px;
+  }
+}
+
+.advantages__h2-box {
+  margin: 31px 0 0 0;
+
+  @media (min-width: @tablet_width) {
+    margin: 55px 0 0 0;
+  }
+
+  @media (min-width: @desktop_width) {
+    margin-top: 68px;
+  }
+}
+
+.advantages__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet_width) {
+    flex-wrap: wrap;
+    height: 521px;
+    margin-top: -12.5px;
+  }
+
+  @media (min-width: @desktop_width) {
+    height: 538px;
+    margin-top: -15px;
+  }
+}
+
+.advantages__item {
+  display: flex;
+  flex-direction: column;
+  min-height: 100px;
+  margin: 22px 0 0 0;
+
+  @media (min-width: @tablet_width) {
+    width: 325px;
+    margin: 50px 9px 0 0;
+  }
+
+  @media (min-width: @desktop_width) {
+    margin-right: 50px;
+  }
+}
+
+.advantages__item-container-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.advantages__item-icon--flower {
+  margin: 6px 0 0 8px;
+}
+
+.advantages__item-icon--banknote {
+  margin: 8px 0 0 0;
+}
+
+.advantages__item-icon--like {
+  margin: 13px 0 0 7px;
+}
+
+.advantages__item-icon--knitting {
+  margin: 10px 0 0 3px;
+}
+
+.advantages__item-icon--rocket {
+  margin: 11px 0 0 -6px;
+}
+
+.advantages__item-icon--present {
+  margin: 10px 0 0 3px;
+}
+
+.advantages__item-text {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  color: @basic_black;
+  margin: 0;
+
+  @media (min-width: @tablet_width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
