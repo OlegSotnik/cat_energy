@@ -22,6 +22,27 @@ document.addEventListener( 'click', (e) => {
 	}
 })
 
+// Слайдер "Было - стало"
+
+const sliderAfter = document.querySelector('.slider__after');
+const sliderBefore = document.querySelector('.slider__before');
+const sliderRange = document.querySelector('.slider__range');
+const sliderAfterImage = document.querySelector('.slider__after-image');
+
+sliderRange.addEventListener("input", function () {
+  let x = this.value;
+  sliderBefore.style.width = x + '%';
+  sliderAfter.style.width = (100-x) + '%';
+  sliderAfter.style.left = x + '%';
+
+  if (document.documentElement.clientWidth < 768) {
+    sliderAfterImage.style.left = -280 / 100 * x + 10 + 'px';
+  } else {
+    sliderAfterImage.style.left = -560 / 100 * x + 20 + 'px';
+  }
+
+});
+
 // Слайдер отзывов на главной.
 
 // let position = 0;
