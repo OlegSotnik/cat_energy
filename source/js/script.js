@@ -43,64 +43,68 @@ sliderRange.addEventListener("input", function () {
 
 });
 
-// Слайдер отзывов на главной.
+// Слайдер товаров на главной.
 
-// let position = 0;
-// const sliderWindow = document.querySelector('.feedback__slider-window');
-// const track = document.querySelector('.feedback__slider-list');
-// const items = document.querySelectorAll('.feedback__slider-item');
-// const arrowLeft = document.querySelector('.slider-arrow__left');
-// const arrowRight = document.querySelector('.slider-arrow__right');
-// const leftLine = document.querySelector('.left__line');
-// const rightLine = document.querySelector('.right__line');
-// const itemsCount = items.length;
-// const itemWidth = sliderWindow.clientWidth;
+let position = 0;
+const sliderWindow = document.querySelector('.products__slider-window');
+const track = document.querySelector('.products__slider-list');
+const items = document.querySelectorAll('.products__slider-item');
+const arrowLeft = document.querySelector('.slider-arrow__box--left');
+const arrowRight = document.querySelector('.slider-arrow__box--right');
+const leftLine = document.querySelector('.slider-arrow--left');
+const rightLine = document.querySelector('.slider-arrow--right');
+const itemsCount = items.length;
+const itemWidth = sliderWindow.clientWidth;
 
-// items.forEach((item) => {
-//   item.style.minWidth = `${itemWidth}px`;
-// });
+if (document.documentElement.clientWidth < 1024) {
 
-// arrowRight.addEventListener('click', () => {
-//   const itemsLeft = itemsCount - (Math.abs(position) + itemWidth) / itemWidth;
+  items.forEach((item) => {
+    item.style.minWidth = `${itemWidth}px`;
+  });
 
-//   position -= itemsLeft >= 1 ? itemWidth : itemsLeft * itemWidth;
+  arrowRight.addEventListener('click', () => {
+    const itemsLeft = itemsCount - (Math.abs(position) + itemWidth) / itemWidth;
 
-//   setPosition();
-//   checkArrows();
-// });
+    position -= itemsLeft >= 1 ? itemWidth : itemsLeft * itemWidth;
 
-// arrowLeft.addEventListener('click', () => {
-//   const itemsLeft = Math.abs(position) / itemWidth;
+    setPosition();
+    checkArrows();
+  });
 
-//   position += itemsLeft >= 1 ? itemWidth : itemsLeft * itemWidth;
+  arrowLeft.addEventListener('click', () => {
+    const itemsLeft = Math.abs(position) / itemWidth;
 
-//   setPosition();
-//   checkArrows();
-// });
+    position += itemsLeft >= 1 ? itemWidth : itemsLeft * itemWidth;
 
-// const setPosition = () => {
-//   track.style.transform = `translateX(${position}px)`;
-// };
+    setPosition();
+    checkArrows();
+  });
 
-// const checkArrows = () => {
-//   if (position === 0) {
-//     leftLine.classList.add('line--inactive');
-//     arrowLeft.classList.add('slider-arrow__left--inactive');
-//   } else {
-//     leftLine.classList.remove('line--inactive');
-//     arrowLeft.classList.remove('slider-arrow__left--inactive');
-//   }
+  const setPosition = () => {
+    track.style.transform = `translateX(${position}px)`;
+  };
 
-//   if (position <= -(itemsCount - 1) * itemWidth) {
-//     rightLine.classList.add('line--inactive');
-//     arrowRight.classList.add('slider-arrow__right--inactive');
-//   } else {
-//     rightLine.classList.remove('line--inactive');
-//     arrowRight.classList.remove('slider-arrow__right--inactive');
-//   }
-// };
+  const checkArrows = () => {
+    if (position === 0) {
+      leftLine.classList.add('line--inactive');
+      arrowLeft.classList.add('slider-arrow__left--inactive');
+    } else {
+      leftLine.classList.remove('line--inactive');
+      arrowLeft.classList.remove('slider-arrow__left--inactive');
+    }
 
-// checkArrows();
+    if (position <= -(itemsCount - 1) * itemWidth) {
+      rightLine.classList.add('line--inactive');
+      arrowRight.classList.add('slider-arrow__right--inactive');
+    } else {
+      rightLine.classList.remove('line--inactive');
+      arrowRight.classList.remove('slider-arrow__right--inactive');
+    }
+  };
+
+  checkArrows();
+
+}
 
 // Метка яндекс карты на главной.
 
