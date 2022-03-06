@@ -10,6 +10,7 @@
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png"> <!-- 180×180 -->
   <link rel="manifest" href="manifest.webmanifest">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=4adc899a-6c22-439f-bd35-fd1606be0afe"></script>
 </head>
 
 <body class="page__body">
@@ -306,10 +307,13 @@
       </div>
     </section>
 
-    <section class="main__banner1">
-      <div class="banner__container">
-        <h2 class="page__h2">Контакты</h2>
+    <section class="main__contacts">
+      <h2 class="visually-hidden">Контакты</h2>
+      <div class="contacts__text">
+        <p class="contacts__paragraph">Приглашаем к сотрудничеству дилеров!</p>
+        <a href="contacts__address">г.Воронеж<br> ул.Платонова д.13</a>
       </div>
+      <div class="contacts__map" id="map"></div>
     </section>
 
   </main>
