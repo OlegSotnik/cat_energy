@@ -139,35 +139,68 @@ if (document.documentElement.clientWidth < 768) {
         .add(myPlacemark);
   });
 } else {
-  ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-            center: [51.657903, 39.201662],
-            zoom: 16
-        }, {
-            searchControlProvider: 'yandex#search'
-        }),
+  if (document.documentElement.clientWidth < 1440) {
+    ymaps.ready(function () {
+      var myMap = new ymaps.Map('map', {
+              center: [51.657903, 39.201662],
+              zoom: 15.5
+          }, {
+              searchControlProvider: 'yandex#search'
+          }),
 
-        // Создаём макет содержимого.
-        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-        ),
+          // Создаём макет содержимого.
+          MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+              '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+          ),
 
-        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'CAT ENERGY',
-            balloonContent: 'CAT ENERGY - функциональное питание для котов!'
-        }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#image',
-            // Своё изображение иконки метки.
-            iconImageHref: '../img/map-pin-tablet.png',
-            iconImageSize: [113, 106],
-            iconImageOffset: [-50, -105]
-        })
+          myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+              hintContent: 'CAT ENERGY',
+              balloonContent: 'CAT ENERGY - функциональное питание для котов!'
+          }, {
+              // Опции.
+              // Необходимо указать данный тип макета.
+              iconLayout: 'default#image',
+              // Своё изображение иконки метки.
+              iconImageHref: '../img/map-pin-tablet.png',
+              iconImageSize: [113, 106],
+              iconImageOffset: [-50, -105]
+          })
 
-    myMap.geoObjects
-        .add(myPlacemark);
-  });
+      myMap.geoObjects
+          .add(myPlacemark);
+    });
+  } else {
+    ymaps.ready(function () {
+      var myMap = new ymaps.Map('map', {
+              center: [51.657903, 39.195],
+              zoom: 16
+          }, {
+              searchControlProvider: 'yandex#search'
+          }),
+
+          // Создаём макет содержимого.
+          MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+              '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+          ),
+
+          myPlacemark = new ymaps.Placemark([51.657903, 39.201662], {
+              hintContent: 'CAT ENERGY',
+              balloonContent: 'CAT ENERGY - функциональное питание для котов!'
+          }, {
+              // Опции.
+              // Необходимо указать данный тип макета.
+              iconLayout: 'default#image',
+              // Своё изображение иконки метки.
+              iconImageHref: '../img/map-pin-tablet.png',
+              iconImageSize: [113, 106],
+              iconImageOffset: [-50, -105],
+              iconContentOffset: [215, 215]
+          })
+
+      myMap.geoObjects
+          .add(myPlacemark);
+    });
+  }
 }
 
 
