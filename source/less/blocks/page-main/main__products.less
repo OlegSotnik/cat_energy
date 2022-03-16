@@ -106,6 +106,17 @@
   width: 100%;
 }
 
+.products__slider-item:hover .slider-item__image {
+  transform: scale(1.1);
+  transition: .25s ease;
+}
+
+.products__slider-item:active .slider-item__image {
+  opacity: 0.6;
+  transform: scale(0.95);
+  transition: .15s ease;
+}
+
 .slider-item__heading {
   margin: 34px 36px 0;
   width: 50%;
@@ -118,6 +129,7 @@
 }
 
 .slider-item__heading-link {
+  display: inline-block;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -126,6 +138,18 @@
   text-transform: uppercase;
   text-decoration: none;
   color: @basic_black;
+}
+
+.products__slider-item:hover .slider-item__heading-link {
+  color: @lime_green;
+  transform: scale(1.1);
+  transition: .25s ease;
+}
+
+.products__slider-item:active .slider-item__heading-link {
+  opacity: 0.6;
+  transform: scale(0.95);
+  transition: .15s ease;
 }
 
 .characteristic__list {
@@ -155,6 +179,7 @@
 }
 
 .slider-item__link {
+  position: relative;
   display: inline-block;
   width: calc(~'100% - 72px');
   max-width: 420px;
@@ -172,6 +197,35 @@
   text-align: center;
   text-transform: uppercase;
   color: @basic_white;
+}
+
+.slider-item__link:hover {
+  opacity: .9;
+  transform: scale(1.1);
+  transition: .25s ease;
+}
+
+.slider-item__link:active {
+  opacity: 0.6;
+  transform: scale(0.95);
+  transition: .15s ease;
+}
+
+.slider-item__link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, @transparent, @basic_white, @transparent) no-repeat;
+  background-size: 100% 100%;
+  background-position: 0 -50px;
+}
+
+.slider-item__link:hover::after {
+  background-position: 0 50px;
+  transition: .1s linear;
 }
 
 .slider-arrow__box {
@@ -294,6 +348,18 @@
     height: 110px;}
 }
 
+.link-to-all__plus-link:hover {
+  opacity: .9;
+  transform: scale(1.5);
+  transition: .25s ease;
+}
+
+.link-to-all__plus-link:active {
+  opacity: .6;
+  transform: scale(0.95);
+  transition: .15s ease;
+}
+
 .link-to-all__plus-icon {
   position: relative;
   width: 100%;
@@ -405,6 +471,18 @@
   }
 }
 
+.text__button:hover {
+  color: @lime_green;
+  transform: scale(1.1);
+  transition: .25s ease;
+}
+
+.text__button:active {
+  opacity: 0.6;
+  transform: scale(0.95);
+  transition: .15s ease;
+}
+
 .products__stock {
   display: flex;
   flex-direction: column;
@@ -453,6 +531,18 @@
     width: 585px;
     margin: 50px 0 0 0;
   }
+}
+
+.products__stock:hover {
+  opacity: .8;
+  transform: scale(1.1);
+  transition: .25s ease;
+}
+
+.products__stock:active {
+  opacity: .6;
+  transform: scale(0.95);
+  transition: .15s ease;
 }
 
 .stock__icon {

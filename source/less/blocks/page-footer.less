@@ -52,6 +52,18 @@
   height: 24px;
 }
 
+.footer__logo-image:hover {
+  opacity: .6;
+  transform: scale(1.1);
+  transition: .25s ease;
+}
+
+.footer__logo-image:active {
+  opacity: .3;
+  transform: scale(.9);
+  transition: .15s ease;
+}
+
 .footer__list-socials {
   display: flex;
   justify-content: center;
@@ -84,6 +96,18 @@
   align-items: center;
   width: 100%;
   height: 100%;
+}
+
+.item-socials__link:hover {
+  opacity: .6;
+  transform: scale(1.2);
+  transition: .25s ease;
+}
+
+.item-socials__link:active {
+  opacity: .3;
+  transform: scale(.9);
+  transition: .15s ease;
 }
 
 .item-socials__vk-icon {
@@ -162,4 +186,16 @@
     font-size: 19px;
     line-height: 22px;
   }
+}
+
+.developer__name:hover {
+  color: @lime_green;
+  transform: scale(1.1);
+  transition: .25s ease;
+}
+
+.developer__name:active {
+  opacity: 0.6;
+  transform: scale(0.95);
+  transition: .15s ease;
 }

@@ -94,6 +94,7 @@
   display: none;
 
   @media (min-width: @desktop_width) {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,6 +110,37 @@
     text-transform: uppercase;
     color: @basic_white;
     text-decoration: none;
+  }
+}
+
+.banner__button-link:hover {
+  opacity: .9;
+  transform: scale(1.1);
+  transition: .25s ease;
+}
+
+.banner__button-link:active {
+  opacity: 0.6;
+  transform: scale(0.95);
+  transition: .15s ease;
+}
+
+.banner__button-link::after {
+  @media (min-width: @desktop_width) {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, @transparent, @basic_white, @transparent) no-repeat;
+    background-size: 100% 100%;
+    background-position: 0 -50px;
+  }
+}
+
+.banner__button-link:hover::after {
+  @media (min-width: @desktop_width) {
+    background-position: 0 50px;
+    transition: .1s linear;
   }
 }
 
